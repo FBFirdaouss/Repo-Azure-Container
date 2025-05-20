@@ -26,11 +26,11 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-app-counter-firdaouss:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-app-counter-Firdaouss:latest
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: my-web-idriss
+          app-name: web-app-counter-Firdaouss
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/web-app-counter-firdaouss:latest
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/web-app-counter-Firdaouss:latest
